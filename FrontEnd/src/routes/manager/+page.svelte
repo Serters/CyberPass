@@ -182,7 +182,7 @@
   const handlePasswordDelete = async () => {
     if (selectedEntry < 0) return;
 
-    if (!confirm("🥺🥺🥺\nAre you sure you want to delete this password?\n👉👈")) return;
+    if (!confirm("Are you sure you want to delete this password?")) return;
 
     const response = await fetch(
       `${PUBLIC_API_URL}/api/PasswordEntry/${selectedEntry}`,
@@ -312,7 +312,7 @@
 
   <Category title="">
     {#if filteredPasswords.length < 1}
-      <li>No passwords 🥺🥺</li>
+      <li>No passwords</li>
     {/if}
     {#each filteredPasswords as entry}
       <li>
